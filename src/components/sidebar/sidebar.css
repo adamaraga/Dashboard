@@ -1,0 +1,280 @@
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: #f1f5f9;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: .3s;
+}
+
+.shrinkSidebar {
+  width: 7.5%;
+}
+
+.sidebarShrinkBtn {
+  position: absolute;
+  top: 70px;
+  right: -10px;
+  z-index: 9999999;
+  outline: none;
+  border: 1px solid rgb(201, 201, 201);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #686868;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+}
+
+.sidebarShrinkIcon {
+  font-size: 20px !important;
+  color: #a6afbd;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(226, 226, 226);
+}
+
+.sidebarWrapper {
+  padding: 0 20px;
+  color: var(--text-color);
+  overflow-Y: auto;
+
+}
+
+.sidebarLogo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: 35px;
+  /* text-align: center; */
+}
+
+.sidebarMenu {
+  margin-bottom: 10px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  color: rgb(187, 186, 186);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 5px;
+}
+
+.sidebarListItem {
+  margin-bottom: 15px;
+  padding: 5px;
+  padding-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.sidebarListItem.active {
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  color: #25273b;
+}
+
+.sidebarListItem.active .sidebarIcon {
+  color: var(--primary-color);
+}
+
+.sidebarListItem:hover {
+  background-color: white;
+}
+
+.sidebarIcon {
+  margin-right: 5px;
+  font-size: 25px !important;
+  color: #a6afbd;
+  transition: .3s;
+}
+
+.sidebarDropdownIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  transition: 0.4s;
+  color: #a6afbd;
+}
+
+.turnUp {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes rotateOut {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 180deg) translateY(50%);
+    transform: rotate3d(0, 0, 1, 180deg) translateY(50%);
+  }
+}
+@keyframes rotateOut {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 180deg) translateY(50%);
+    transform: rotate3d(0, 0, 1, 180deg) translateY(50%);
+  }
+}
+
+.turnSide {
+  -webkit-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 180deg) translateX(8px);
+    transform: rotate3d(0, 0, 1, 180deg) translateX(8px);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+  100% {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 180deg) translateX(8px);
+    transform: rotate3d(0, 0, 1, 180deg) translateX(8px);
+  }
+}
+
+.sidebarDropDownList {
+  list-style: none;
+  padding: 5px;
+  padding-left: 20px;
+  position: relative;
+  top: -15px;
+}
+
+.sidebarDropDownItem {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  transition: 0.3s;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.sidebarDropDownItem.active {
+  background-color: white;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.06);
+  color: #25273b;
+}
+
+.sidebarDropDownItem.active .sidebarIcon {
+  color: var(--primary-color);
+}
+
+.sidebarDropDownItem:hover {
+  background-color: white;
+}
+
+/* .whiteBac {
+  background-color: white;
+} */
+
+.sidebarIconNotifiCon {
+  position: relative;
+}
+
+.sidebarIconNotifiDot {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(230, 0, 0);
+  border-radius: 50%;
+  left: 16px;
+  top: 3px;
+}
+
+.sidebarIconMessaDot {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(230, 0, 0);
+  border-radius: 50%;
+  left: 22px;
+  top: 0px;
+}
+
+.sidebarLogout {
+  padding: 5px 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  
+  border-top: 1.5px solid #dbe3f0;
+  
+}
+
+.sidebarLogout:hover .sidebarIcon{
+  color: var(--primary-color);
+}

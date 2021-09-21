@@ -1,0 +1,71 @@
+.featured {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.featuredItem {
+  flex: 1;
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.featuredItem:not(:last-child) {
+  margin-right: 30px;
+}
+
+.featuredTitle {
+  font-size: 18px;
+  color: gray;
+
+}
+
+.featuredMoneyContainer {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.featuredMoney {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.featuredMoneyRate {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  color: #1AD598;
+}
+
+.featuredMoneyRate.negative {
+  color: #dd5757;
+  
+}
+
+.featuredIcon {
+  font-size: 20px !important;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #D1F7EA;
+  transform: rotate(45deg);
+}
+
+.featuredIcon.negative {
+  background-color: #FFF0F1;
+}
+
+.featuredSub {
+  font-size: 13px;
+  color: gray;
+}
+
+/* .progressBar {
+  margin-left: 10px;
+} */

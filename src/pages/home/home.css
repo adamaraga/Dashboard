@@ -1,0 +1,12 @@
+.home{
+    width: 100%;
+}
+
+.homeWidgets{
+    display: flex;
+    margin: 20px 0;
+}
+
+.homeWrapper {
+    margin: 40px 60px;
+}

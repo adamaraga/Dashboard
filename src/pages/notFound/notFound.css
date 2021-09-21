@@ -1,0 +1,60 @@
+.notFound {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 99999999999;
+}
+
+.notFoundWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.notFoundWrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.notFoundInfo {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.notFoundInfo h1 {
+  color: white;
+  background-color: rgb(184, 184, 184);
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.notFoundBtn {
+  margin-top: 20px;
+  width: 200px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  box-shadow: 6px 9px 22px 0px rgba(0,0,0,0.15);
+-webkit-box-shadow: 6px 9px 22px 0px rgba(0,0,0,0.15);
+-moz-box-shadow: 6px 9px 22px 0px rgba(0,0,0,0.15);
+  margin-left: 20px;
+  transition: .3s;
+}
+
+.notFoundBtn:hover {
+    transform: scale(1.1);
+}
